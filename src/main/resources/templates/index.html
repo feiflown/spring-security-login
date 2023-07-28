@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!--将当前登录用户的信息存储在名为user的变量中。它通过Session.SPRING_SECURITY_CONTEXT.authentication.principal表达式从会话中获取当前认证对象的principal属性-->
+    <#assign user=Session.SPRING_SECURITY_CONTEXT.authentication.principal/>
+</head>
+<body>
+欢迎你,${user.username}<br/>
+<a href="/logout">注销</a>
+
+</body>
+</html>
